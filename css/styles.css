@@ -635,22 +635,25 @@ img {
   letter-spacing: 0.03em;
 }
 
-.product-overlay {
+.resource-overlay {
+  box-sizing: content-box;
   position: absolute;
   opacity: 1;
   top: 0;
   left: 0;
-  transform: translateY(100%);
+  transform: translateY(101%);
   transition: transform 250ms var(--timing-function);
   width: 100%;
   height: 100%;
   background-color: rgba(33, 150, 243, 0.9);
+  margin: -50px 0;
+  padding: inherit;
 }
 .flex-element-inner:focus .overlay {
   transform: translateY(0);
 }
-.flex-element-inner:hover .product-overlay,
-.flex-element-inner:focus .product-overlay {
+.flex-element-inner:hover .resource-overlay,
+.flex-element-inner:focus .resource-overlay {
   transform: translateY(0%);
 }
 .container-content-overlay {
@@ -659,6 +662,7 @@ img {
   left: 0;
   padding: 63px 24px;
 }
+
 /* Regylar clients */
 .clients {
   padding-bottom: 94px;
