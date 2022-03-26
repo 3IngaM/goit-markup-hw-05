@@ -139,6 +139,38 @@ img {
 .contacts {
   margin-right: 50px;
 }
+.current {
+  position: relative;
+  color: #00a650;
+  cursor: pointer;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.current::after {
+  display: block;
+  position: absolute;
+  width: 48px;
+  height: 4px;
+  top: 76px;
+  background: #2196f3;
+  border-radius: 2px;
+  content: "";
+  transition: width 250ms ease-out;
+}
+
+.current:hover::after,
+.current:focus::after {
+  width: 100%;
+}
+.hover-portfolio {
+  position: absolute;
+  width: 78px;
+  height: 4px;
+  top: 76px;
+  background: #2196f3;
+  border-radius: 2px;
+}
 .nav-link {
   color: var(--primary-text-color);
   font-style: normal;
@@ -446,21 +478,24 @@ img {
   letter-spacing: 0.03em;
   text-align: center;
 }
-.box1 {
+.product-thumb {
   position: relative;
-  top: 0;
+}
+.box1 {
+  position: absolute;
+  bottom: 0;
   right: 0;
   display: flex;
 }
 .box2 {
-  position: relative;
-  top: 0;
+  position: absolute;
+  bottom: 0;
   right: 0;
   display: flex;
 }
 .box3 {
-  position: relative;
-  top: 0;
+  position: absolute;
+  bottom: 0;
   right: 0;
   display: flex;
 }
@@ -481,18 +516,20 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--primary-white-text-color);
-  top: 88%;
-  left: 46%;
-  transform: translate(-50%, -50%);
+  bottom: 70%;
+  right: 0%;
+  transform: translate(-8%, -0%);
   background: rgba(47, 48, 58, 0.8);
 }
 .meta,
 .meta1,
 .meta2 {
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 27px;
+  margin-bottom: 27px;
 }
 
 /* Our team */
@@ -690,11 +727,9 @@ img {
   top: 0;
   left: 0;
   transform: translateY(101%);
-  transition: transform 250ms var(--timing-function);
   width: 100%;
   height: 100%;
   background-color: rgba(33, 150, 243, 0.9);
-  margin: -50px 0;
   padding: inherit;
   transition: transform 250ms ease;
 }
@@ -748,7 +783,6 @@ img {
   width: 170px;
   height: 92px;
   color: #afb1b8;
-  border: 1px solid #afb1b8;
   border-radius: 4px;
   margin-right: 30px;
 }
