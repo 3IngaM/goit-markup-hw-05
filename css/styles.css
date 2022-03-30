@@ -974,12 +974,6 @@ img {
   fill: #ffffff;
 }
 
-.backdrop.is-hidden {
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-}
-
 .backdrop {
   position: fixed;
   top: 0;
@@ -988,7 +982,19 @@ img {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.05);
   opacity: 1;
-  visibility: visible;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%; -50%);
+  min-height: 581px;
+  min-width: 528px;
+  background-color: #ffffff;
+  padding: 15px;
 }
